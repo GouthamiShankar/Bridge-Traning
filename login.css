@@ -5,27 +5,37 @@ input[type=email] {
     border-radius: 4px;
   }
   
-  input[type=password] {
+  input[type=text] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  input[type=number] {
     width: 50%;
     padding: 12px;
     border: 1px solid black;
     border-radius: 4px;
   }
 
-
-  input[type=submit] {
-    background-color: #04AA6D;
+  input[type=button] {
+    background-color: skyblue;
     color: black;
     padding: 12px 25px;
     border: none;
     border-radius: 4px;
     margin-top: 10px;
+  }
 
+  input[type=reset] {
+    background-color: red;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
   }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+
   .col-25 {
     width: 25%;
     margin-top: 6px;
@@ -34,6 +44,10 @@ input[type=email] {
   .col-75 {
     width: 75%;
     margin-top: 6px;
+  }
+
+  .radio-col{
+    margin-top: 20px;
   }
     
 .container {
