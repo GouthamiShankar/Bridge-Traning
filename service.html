@@ -63,7 +63,10 @@
                         var interest=Number(document.f1.rate.value);
                         var dur=Number(document.f1.duration.value);
                         if(dur>=1 && dur<=25){
-                            amt=(amt*interest*dur)/100;
+                            interest=amt/interest;
+                            dur=dur*12;
+                            amt=amt+interest;
+                            amt=amt/dur;
                             document.f1.amt.value = amt;
                         }else{
                             document.getElementById("validation").innerHTML = textValidation;
