@@ -63,8 +63,8 @@
                         var interest=Number(document.f1.rate.value);
                         var dur=Number(document.f1.duration.value);
                         if(dur>=1 && dur<=25){
-                        amt=(amt*interest*dur)/100;
-                        document.f1.amt.value = amt;
+                            amt=(amt*interest*dur)/100;
+                            document.f1.amt.value = amt;
                         }else{
                             document.getElementById("validation").innerHTML = textValidation;
                             document.getElementById("row").style.display="none";
@@ -165,8 +165,8 @@
                         var amt=Number(document.f2.amount.value);
                         var rate=Number(document.f2.rate.value);
                         var dur=Number(document.f2.duration.value);
-                        var interest= amt*rate*dur;    
-                        var maturity=  interest+(amt*12);
+                        var interest= (amt*rate*dur)/100;    
+                        var maturity=  interest+amt;
                         document.f2.maturity.value = maturity;
             }
             
@@ -207,7 +207,7 @@
                                                 <label for="rate">Rate of Interest</label>
                                             </div>
                                             <div class="col-75">
-                                                <input type="text" id="rate" name="rate" value="3.5" readOnly>
+                                                <input type="text" id="rate" name="rate" value="4" readOnly>
                                             </div>
                                         </div>
                                         <div class="row" id="row">
@@ -270,9 +270,8 @@
         </ul>
             
     </div>
-    <hr>
     <div id="d1"></div>
-    
+    <hr>
     <div>
         <footer>
             <h3 style="text-align:center ;">&copySwissBank &nbsp;&nbsp;&nbsp;&nbsp;  www.swissbank.com</h3>
